@@ -192,7 +192,7 @@ public class GeoServerOAuth2FilterConfig extends PreAuthenticatedUserNameFilterC
     protected StringBuilder buildAuthorizationUrl() {
         final StringBuilder loginUri = new StringBuilder(getUserAuthorizationUri());
         loginUri.append("?")
-                .append("response_type=code")
+                .append("response_type=code+id_token")
                 .append("&")
                 .append("client_id=")
                 .append(getCliendId())
